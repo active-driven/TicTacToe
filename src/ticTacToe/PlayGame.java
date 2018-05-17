@@ -42,8 +42,7 @@ public class PlayGame {
 			return "Draw! Wanna play again?";
 		} else {
 			return player==1 ? "Next move: Player " + 1 : "Next move: Player " + 2;
-		}
-		
+		}		
 	}
 	
 	/**

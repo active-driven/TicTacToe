@@ -23,7 +23,7 @@ public class GameInterface extends Application {
 	}
 
 	@Override
-    public void start(Stage primaryStage) {
+	public void start(Stage primaryStage) {
 
 		PlayGame test = new PlayGame();
 		
@@ -35,7 +35,7 @@ public class GameInterface extends Application {
         grid.setVgap(1);
         grid.setPadding(new Insets(35, 35, 35, 35));
         grid.setStyle("-fx-background-color: transparent;");   // or null; if not set, scene background is (default) white always
-  //      grid.setGridLinesVisible(true);
+    //  grid.setGridLinesVisible(true);
 
         
         Text startingLine = new Text("Click me:)");
@@ -68,8 +68,7 @@ public class GameInterface extends Application {
         grid.add(gameName, 3, 70);
         grid.add(gameVersion, 3, 71);
         grid.add(authorName, 3, 72);
-        
-         
+              
         Scene scene = new Scene(grid, 600, 600);
         scene.setFill(Color.YELLOWGREEN); 
         
@@ -78,7 +77,7 @@ public class GameInterface extends Application {
     }
 	
 	public void setButtons(GridPane grid, PlayGame test) {   // nodes/buttons are going from top to down and then next column
-		 	Button btn1 = new Button("");    // (0, 0) coordinate on gameGrid
+			Button btn1 = new Button("");    // (0, 0) coordinate on gameGrid
 	        Button btn2 = new Button("");    // (1, 0)
 	        Button btn3 = new Button("");    // (2, 0)
 	        Button btn4 = new Button("");    // (0, 1)
@@ -287,8 +286,5 @@ public class GameInterface extends Application {
 		        	btn9.setDisable(true);
 	        	}
 	        });
- 
 	}
-	
-
 }

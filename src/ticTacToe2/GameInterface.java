@@ -27,7 +27,7 @@ public class GameInterface extends Application {
 	}
 
 	@Override
-    public void start(Stage primaryStage) {
+	public void start(Stage primaryStage) {
 
 		PlayGame test = new PlayGame();
 		
@@ -40,8 +40,7 @@ public class GameInterface extends Application {
         grid.setPadding(new Insets(35, 35, 35, 35));
         grid.setStyle("-fx-background-color: transparent;");   // or null; if not set, scene background is (default) white always
   //    grid.setGridLinesVisible(true);
-
-        
+       
         Text startingLine = new Text("Click me:)");
         startingLine.setFill(Color.BLACK);
         startingLine.setFont(Font.font("Tahoma", FontWeight.EXTRA_BOLD, 20));
@@ -116,20 +115,18 @@ public class GameInterface extends Application {
         primaryStage.show();
     }
 	
+	/* (non-Javadoc) 
+	 * why using setOpacity() method:
+	 * setting buttons as disabled by setDisable(true) method (in setOnAction() method)
+	 * causes the text on the button to be very pale,
+	 * setting opacity by setOpacity() method causes the text to be well visible again 
+	 * (all values except 0 give the same effect) 
+	 */ 	 	
 	/**
 	 * Sets and defines buttons on GridPane.
 	 * @param grid GridPane pane
 	 * @param test PlayGame instance
 	 */	
-	
-	 /* (non-Javadoc) 
-	  * why using setOpacity() method:
-	  * setting buttons as disabled by setDisable(true) method (in setOnAction() method)
-	  * causes the text on the button to be very pale,
-	  * setting opacity by setOpacity() method causes the text to be well visible again 
-	  * (all values except 0 give the same effect) 
-	  */ 	 	
-	
 	public void setButtons(GridPane grid, PlayGame test) {  // nodes/buttons on GridPane are going from top to down and next column then
 		
 			Button[][] buttons = new Button[3][3];
